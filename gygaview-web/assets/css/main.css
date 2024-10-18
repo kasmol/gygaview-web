@@ -1422,12 +1422,15 @@ section,
 .team .team-member .pic {
   overflow: hidden;
   width: 150px;
+  height: 150px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
 .team .team-member .pic img {
   transition: ease-in-out 0.3s;
+  width: 150px; 
+  height: 150px;
 }
 
 .team .team-member:hover {
