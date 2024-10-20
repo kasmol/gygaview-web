@@ -162,12 +162,12 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 28px;
   margin: 0;
   font-weight: 500;
   color: var(--heading-color);
   letter-spacing: 2px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .header .btn-getstarted,
@@ -187,6 +187,11 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
+.header .hot-price{
+  background: none;
+  font-size: 15px;
+}
+
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -195,7 +200,7 @@ h6 {
   .header .btn-getstarted {
     order: 2;
     margin: 0 15px 0 0;
-    padding: 6px 15px;
+    padding: 6px 13px;
   }
 
   .header .navmenu {
@@ -615,6 +620,7 @@ h6 {
 
 .footer .footer-links ul li {
   padding: 10px 0;
+  font-size: 12.5px;
   display: flex;
   align-items: center;
 }
@@ -637,12 +643,13 @@ h6 {
   color: var(--heading-color);
   font-size: 28px;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: var(--heading-font);
 }
 
 .footer .footer-contact p {
   margin-bottom: 5px;
+  font-size: 12.6px;
 }
 
 .footer .copyright {
@@ -736,6 +743,16 @@ h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+  .header .btn-getstarted {
+    margin: 0 15px 0 0;
+    padding: 4px 8px;
+  }
+
+}
+@media (max-width: 680px){
+  .header .hot-price{
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -805,7 +822,8 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
+  margin-top: -36px;
+  font-size: 25px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -917,13 +935,20 @@ section,
 }
 
 @media (max-width: 640px) {
+  .hero .container{
+    width: 80%;
+  }
   .hero h1 {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 36px;
+    margin-top: -12px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero p {
-    font-size: 18px;
+    text-align: center;
+    font-size: 17px;
     line-height: 24px;
     margin-bottom: 30px;
   }
@@ -931,6 +956,11 @@ section,
   .hero .btn-get-started,
   .hero .btn-watch-video {
     font-size: 13px;
+  }
+  .header .logo h1{
+    font-size: 20px;
+  }
+  .contact-inputs{
   }
 }
 
@@ -971,6 +1001,10 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about p{
+  font-size: 15px;
+  text-align: center;
+}
 .about ul {
   list-style: none;
   padding: 0;
@@ -994,10 +1028,12 @@ section,
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
-  padding: 8px 28px;
-  border-radius: 5px;
+  padding: 6px 20px;
+  border-radius: 12px;
   transition: 0.3s;
   display: inline-flex;
+  margin-left: 20px;
+  margin-top: 10px;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--accent-color);
@@ -1407,7 +1443,7 @@ section,
   position: relative;
   border-radius: 5px;
   transition: 0.5s;
-  padding: 30px;
+  padding: 15px;
   height: 100%;
 }
 
@@ -1422,15 +1458,17 @@ section,
 .team .team-member .pic {
   overflow: hidden;
   width: 150px;
-  height: 150px;
   border-radius: 50%;
   flex-shrink: 0;
+  margin-top: 10px;
+  margin-right: -25px;
 }
 
 .team .team-member .pic img {
   transition: ease-in-out 0.3s;
-  width: 150px; 
-  height: 150px;
+  max-width: 90px;
+  max-height: 90px;
+  padding-top: 20px;
 }
 
 .team .team-member:hover {
@@ -1451,12 +1489,12 @@ section,
 .team .team-member h4 {
   font-weight: 700;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .team .team-member span {
   display: block;
-  font-size: 15px;
+  font-size: 13px;
   padding-bottom: 10px;
   position: relative;
   font-weight: 500;
@@ -1832,7 +1870,10 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-wrap {
-  background-color: var(--surface-color);
+  background-image: url('/assets/img/email3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-top: 3px solid var(--accent-color);
   border-bottom: 3px solid var(--accent-color);
@@ -1889,6 +1930,74 @@ section,
   border-top: 3px solid var(--accent-color);
   border-bottom: 3px solid var(--accent-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*Edited css for added contact section*/
+.col-lg-7{
+  font-family: 'Outfit';
+  background: linear-gradient(#ffffff, #37517e);
+
+}
+.email_pic{
+  background-image: url('img/email3.png');
+}
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.contact-left-title h2{
+  font-weight: 600;
+  color: #3d4d6a;
+  font-size: 28px;
+  margin-bottom: 1px;
+}
+.contact-left-title hr{
+  border: none;
+  width: 120px;
+  height: 4.5px;
+  background-color: #37517e;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.contact-inputs{
+  margin-left: 11%;
+  width: 80%;
+  height: 38px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  border-radius: 20px;
+}
+.contact-left textarea{
+  height: 80px;
+  padding-top: 15px;
+  border-radius: 20px;
+
+}
+.contact-inputs:focus{
+  border: 2px solid #37517e;
+}
+.contact-inputs::placeholder{
+  color: #a9a9a9;
+}
+
+.contact-left button{
+  position: relative;
+  left: 38%;
+  display: flex;
+  align-items: center;
+  padding: 12px 40px;
+  font-size: 16px;
+  color: #fff;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #47b2e4, #37517e);
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 575px) {
